@@ -1,7 +1,64 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "normalize";
 
 body {
-  background: $c-gray;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+
+  button {
+    font-size: 32px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    outline: none;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    opacity: 0.6;
+    font-weight: 700;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .btn-big {
+    grid-column: 5 / 3;
+    border-bottom-right-radius: 10px;
+  }
+
+  .point {
+    border-bottom-left-radius: 10px;
+  }
+
+  .output {
+    grid-column: 1 / -1;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    .previous-operand {
+      color: #434343;
+      font-size: 26px;
+      font-weight: 700;
+    }
+    
+    .current-operand {
+      color: #000;
+      font-size: 36px;
+      font-weight: 700;
+    }
+  }
 }
