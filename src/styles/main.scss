@@ -66,7 +66,7 @@ body {
 
 @media (max-width: 350px) {
   .calculator-grid {
-    grid-template-columns: repeat(4, 75px);
     grid-template-rows: minmax(120px, auto) repeat(5, 75px);
+    grid-template-columns: repeat(4, 75px);
   }
 }
