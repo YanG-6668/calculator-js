@@ -2,6 +2,7 @@
 
 body {
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .calculator-grid {
@@ -60,5 +61,12 @@ body {
       font-size: 36px;
       font-weight: 700;
     }
+  }
+}
+
+@media (max-width: 350px) {
+  .calculator-grid {
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 75px);
   }
 }
